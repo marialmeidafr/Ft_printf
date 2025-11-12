@@ -29,5 +29,3 @@ int	ft_putnbr(int n)
 	len += ft_putchar((nb % 10) + '0');
 	return (len);
 }
-
-int 

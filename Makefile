@@ -2,7 +2,7 @@
 #           SETTINGS            #
 # ----------------------------- #
 
-NAME = libft.a
+NAME = libftprintf.a
 
 CC = cc
 
@@ -16,13 +16,13 @@ RM = rm -rf
 #             FILES             #
 # ----------------------------- #
 
-FILES = ft_putchar \
-	ft_putstr \
-	ft_putnbr \
-	ft_printfhex \
-	ft_printfptr \
-	ft_printfdecimal \
-	ft_printf \
+FILES = ft_putchar.c \
+	ft_putstr.c \
+	ft_putnbr.c \
+	ft_printfhex.c \
+	ft_printfptr.c \
+	ft_printfdecimal.c \
+	ft_printf.c \
 
 OBJS = $(FILES:.c=.o)
 
