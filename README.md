@@ -20,7 +20,9 @@
 
 The goal of **ft_printf** is to learn how to handle **variadic functions** (functions that accept a variable number of arguments) in C. The challenge is to create a versatile function that can format and print different data types efficiently, mimicking the behavior of the original C standard library function.
 
-### Supported Conversions
+---
+
+## <p align="center">🛠️ Supported Conversions</p>
 
 The function handles the following format specifiers:
   
@@ -36,5 +38,25 @@ The function handles the following format specifiers:
 | **%X** | Prints a number in hexadecimal (base 16) uppercase. |
 | **%%** | Prints a percent sign. |
 
+
+---
+
+## <p align="center"> 🎯 The Challenge</p>
+
+Unlike standard functions, `printf` can take an unlimited number of arguments. To handle this, I implemented the `<stdarg.h>` macros:
+
+
+
+* **`va_list`**: To create a pointer to the argument list.
+* **`va_start`**: To initialize the list.
+* **`va_arg`**: To retrieve each argument based on its type.
+* **`va_end`**: To clean up the list after processing.
+
+## <p align="center">⚙️ How it works</p>
+
+1. **Parsing:** The function scans the input string character by character.
+2. **Detection:** When it hits a `%`, it triggers a "dispatcher" that identifies the format specifier (like `d`, `s`, or `x`).
+3. **Conversion:** It converts the raw data (like an integer or a pointer address) into a string format.
+4. **Counting:** Every character printed is tracked, as the function must return the total length of the printed string.
 
 ---
